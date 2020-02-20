@@ -1,4 +1,7 @@
-.sidebar__title
+
+
+@media screen and (min-width: 600px)
+ .sidebar__title
   margin-bottom: 20px
 
   a
@@ -10,6 +13,8 @@
 
     &:hover
       border-bottom: dotted 1px #9055a2
+
+
 
 .sidebar__intro
   color: $light-body-color
@@ -55,8 +60,16 @@
       color: $active-color
 
 .sidebar__social
-  margin-bottom: 20px
+  margin-top: 20px
+@media screen and (min-width: 600px)
+  .sidebar__social
+    position: absolute
+    bottom: 20px
 
 .sidebar__copyright
   color: $light-body-color
   font-size: 13px
+@media screen and (min-width: 600px)
+  .sidebar__copyright
+    position: absolute
+    bottom: 10px
