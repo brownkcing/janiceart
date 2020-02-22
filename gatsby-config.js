@@ -14,17 +14,19 @@ module.exports = {
       options: {
         apiToken: process.env.DATO_API_TOKEN,
       },
-    },
-    {
-      resolve: `gatsby-remark-images`,
+    },{
+      resolve: `gatsby-transformer-remark`,
       options: {
-        // other options
-        useMediumZoom: {
-          margin: 24,
-          background: 24,
-          scrollOffset: 0,
-        }, // If this option is empty, not apply medium zoom feature.
-      },
+        plugins: [
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              linkImagesToOriginal: false,
+            },
+          },
+          `gatsby-remark-images-zoom`,
+        ],
+      }
     },
   ],
 }
