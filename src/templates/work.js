@@ -25,9 +25,9 @@ export default ({ data }) => (
             __html: data.datoCmsWork.descriptionNode.childMarkdownRemark.html,
           }}
         /> */}
-        {/* <div className="sheet__gallery">
+        <div className="sheet__gallery">
           <Img fluid={data.datoCmsWork.coverImage.fluid} />
-        </div> */}
+        </div>
       </div>
     </article>
   </Layout>
@@ -49,24 +49,3 @@ export const query = graphql`
     }
   }
 `
-// ...GatsbyDatoCmsSeoMetaTags
-//       }
-//       title{
-//         fluid(maxWidth: 200, imgixParams: { fm: "jpg", auto: "compress" }) {
-//           src
-//         }
-//       }
-//       descriptionNode {
-//         childMarkdownRemark {
-//           html
-//         }
-//       }
-//       coverImage {
-//         url
-//         fluid(maxWidth: 600, imgixParams: { fm: "jpg", auto: "compress" }) {
-//           ...GatsbyDatoCmsSizes
-//         }
-//       }
-//     }
-//   }
-// `
