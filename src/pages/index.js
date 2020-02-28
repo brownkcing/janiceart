@@ -3,8 +3,8 @@ import { Link, graphql } from 'gatsby';
 import Masonry from 'react-masonry-component';
 import Img from 'gatsby-image';
 import Layout from "../components/layout";
-import Zoom from 'react-medium-image-zoom'
-import 'react-medium-image-zoom/dist/styles.css';
+
+
 
 const IndexPage = ({ data }) => (
 
@@ -14,9 +14,11 @@ const IndexPage = ({ data }) => (
         <div key={work.id} className="showcase__item">
           <figure className="card">
             <div className="card__image">
-            <Link to={`/works/${work.slug}`} className="card__image">
+     
+            <Link state={{modal:true}} to={`/works/${work.slug}`} className="card__image">
               <Img fluid={work.coverImage.fluid} />
             </Link>
+ 
             </div>
             </figure>
         </div>
