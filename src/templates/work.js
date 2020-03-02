@@ -9,11 +9,12 @@ import "../components/layout.css"
 
 
 export default ({ data }) => (
-    // <ConditionalLayout>
-          <div>
+    <ConditionalLayout>
+       <article className="sheet">
+         <HelmetDatoCms seo={data.datoCmsWork.seoMetaTags} />
             <Img fluid={data.datoCmsWork.coverImage.fluid} />
-          </div>
-    // </ConditionalLayout>
+      </article>
+    </ConditionalLayout>
 )
 
 export const query = graphql`
@@ -25,8 +26,8 @@ export const query = graphql`
       title
       coverImage {
         url
-        fluid(maxWidth: 800,  imgixParams: { fm: "jpg", auto: "compress" }){
-          ...GatsbyDatoCmsSizes
+        fluid(maxWidth: 1000,  imgixParams: {maxW: 1000, fm: "png", auto: "enhance" }){
+          ...GatsbyDatoCmsFluid
         }
       }
     }

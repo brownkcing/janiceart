@@ -5,13 +5,16 @@ import "./layout.css";
 
 const ConditionalLayout = ({ children, ...rest }) => (
   <ModalRoutingContext.Consumer>
-    {({ modal}) => (
+    {({ modal, closeTo }) => (
       modal ? (
         <React.Fragment>
+          <Link to={closeTo}>
+            X
+          </Link>
           {children}
         </React.Fragment>
       ) : (
-        <Layout { ...rest } >
+        <Layout { ...rest }>
           {children}
         </Layout>
       )
