@@ -8,7 +8,7 @@ module.exports = {
     `gatsby-plugin-modal-routing`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
-    `gatsby-transformer-remark`
+    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-source-datocms`,
       options: {
