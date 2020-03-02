@@ -14,8 +14,7 @@ const IndexPage = ({ data }) => (
         <div key={work.id} className="showcase__item">
           <figure className="card">
             <div className="card__image">
-     
-            <Link state={{modal:true}} to={`/works/${work.slug}`} className="card__image">
+            <Link state={{modal:true, noScroll:true}} to={`/works/${work.slug}`} className="card__image">
               <Img fluid={work.coverImage.fluid} />
             </Link>
  

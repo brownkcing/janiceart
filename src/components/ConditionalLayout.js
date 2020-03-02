@@ -11,7 +11,7 @@ const ConditionalLayout = ({ children, ...rest }) => (
           {children}
         </React.Fragment>
       ) : (
-        <Layout { ...rest }>
+        <Layout { ...rest } >
           {children}
         </Layout>
       )
