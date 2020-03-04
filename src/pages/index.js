@@ -17,7 +17,6 @@ const IndexPage = ({ data }) => (
             <Link state={{modal:true, noScroll:true}} to={`/works/${work.slug}`} className="card__image">
               <Img fluid={work.coverImage.fluid} />
             </Link>
- 
             </div>
             </figure>
         </div>

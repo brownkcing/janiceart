@@ -9,7 +9,7 @@ const ConditionalLayout = ({ children, ...rest }) => (
       modal ? (
         <React.Fragment>
           <Link to={closeTo}>
-            X
+            <span className="close"></span>
           </Link>
           {children}
         </React.Fragment>

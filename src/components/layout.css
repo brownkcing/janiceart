@@ -612,6 +612,14 @@
     }
   }
   
+  .close {
+    background-image: url('https://image.flaticon.com/icons/svg/22/22108.svg'); 
+    display: inline-block;
+    width: 35px;
+    height: 25px;
+    background-size: 70%;
+    background-repeat: no-repeat;
+  }
 
 
   .ReactModal__Overlay {
@@ -667,6 +675,7 @@
       min-width: 20rem !important;
       width: 80% !important;
       max-width: 60rem !important;
+      background: transparent !important;
     }
   }
 
@@ -685,6 +694,7 @@
     min-width: 20rem !important;
     width: 38% !important;
     max-width: 60rem !important;
+    background: transparent !important;
   }
 }
   
