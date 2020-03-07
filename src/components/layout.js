@@ -5,6 +5,7 @@ import { StaticQuery, graphql } from "gatsby";
 import { HelmetDatoCms } from "gatsby-source-datocms";
 import "./layout.css";
 import "../styles/index.sass";
+import  Scroll from './Scroll' 
 
 const TemplateWrapper = ({ children }) => {
   const [showMenu, setShowMenu] = useState(false);
@@ -103,7 +104,7 @@ const TemplateWrapper = ({ children }) => {
             </div>
             {children}
           </div>
-          
+        <Scroll showBelow={500}  />
         </div>
       )}
     />
