@@ -9,10 +9,10 @@ const About = ({ data: { about } }) => (
     <article className="sheet">
       <HelmetDatoCms seo={about.seoMetaTags} />
       <div className="sheet__inner">
-        <h1 className="sheet__title">{about.title}</h1>
+        {/* <h1 className="sheet__title">{about.title}</h1> */}
         <p className="sheet__lead">{about.subtitle}</p>
         <div className="sheet__gallery">
-         <Img fluid={about.photo.fluid} />
+         <Img style={{borderRadius: "20%"}} fluid={about.photo.fluid} />
         </div>
         <div
           className="sheet__body"
@@ -36,8 +36,8 @@ export const query = graphql`
       title
       subtitle
       photo {
-        fluid(maxWidth: 600, imgixParams: { fm: "jpg", auto: "compress" }) {
-          ...GatsbyDatoCmsSizes
+        fluid(maxWidth: 1000,  imgixParams: {maxW: 1000, fm: "png", auto: "compress" }){
+          ...GatsbyDatoCmsFluid
         }
       }
       bioNode {
