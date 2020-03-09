@@ -13,6 +13,69 @@
       font-size: 40px
       text-decoration: none
       color: $light-body-color
+      
+      &:hover
+        border-bottom: dotted 1px #9055a2
+
+  .sidebar__intro
+    color: $light-body-color
+    font-family: Patrick Hand SC, Roboto
+    font-size: 16px
+    margin-bottom: 20px
+    margin-left: 20px
+    
+  .sidebar__social
+    margin-left: 30px
+  
+  .sidebar__copyright
+    color: $light-body-color
+    font-size: 13px
+    position: absolute 
+    bottom: 0px 
+    margin-left: 20px
+    height: [footer-height] 
+
+  p
+    margin-bottom: 10px
+
+    &:last-child
+      margin-bottom: 0
+
+  .sidebar__menu
+    font-family: Patrick Hand SC, Roboto
+    font-size: 19px
+    margin-bottom: 50px
+    margin-left: 30px
+
+    li
+      a
+        text-decoration: none
+        display: block
+        padding-left: 20px
+        color: $base-body-color
+        position: relative
+
+        &:before
+          content: ""
+          position: absolute
+          left: 0
+          top: 50%
+          margin-top: -6px
+          height: 12px
+          width: 12px
+          background: url('https://cdn.rawgit.com/encharm/Font-Awesome-SVG-PNG/master/black/svg/chevron-right.svg')
+          background-position: 50% 50%
+          background-repeat: no-repeat
+          background-size: contain
+          opacity: 0.6
+
+        &:hover
+          color: $active-color
+
+      &.is-active a
+        font-weight: bold
+        color: $active-color
+
     
 @media screen and (min-width: 501px)
   .sidebar__title
@@ -29,16 +92,6 @@
       &:hover
         border-bottom: dotted 1px #9055a2
 
-@media screen and (max-width: 500px)
-  .sidebar__intro
-    color: $light-body-color
-    font-family: Patrick Hand SC, Roboto
-    font-size: 16px
-    margin-bottom: 20px
-    margin-left: 20px
-
-
-@media screen and (min-width: 501px)
   .sidebar__intro
     color: $light-body-color
     font-family: Patrick Hand SC, Roboto
@@ -46,58 +99,54 @@
     margin-bottom: 40px
     margin-left: 30px
 
-
+  .sidebar__social
+    margin-left: 30px
   
-.sidebar__social
-  margin-left: 30px
-  
-.sidebar__copyright
-  color: $light-body-color
-  font-size: 13px
-  position: absolute 
-  bottom: 0px 
-  margin-left: 20px
-  height: [footer-height] 
-  
-  
+  .sidebar__copyright
+    color: $light-body-color
+    font-size: 13px
+    position: absolute 
+    bottom: 0px 
+    margin-left: 20px
+    height: [footer-height] 
 
-p
-  margin-bottom: 10px
+  p
+    margin-bottom: 10px
 
-  &:last-child
-     margin-bottom: 0
+    &:last-child
+      margin-bottom: 0
 
-.sidebar__menu
-  font-family: Patrick Hand SC, Roboto
-  font-size: 19px
-  margin-bottom: 50px
-  margin-left: 30px
+  .sidebar__menu
+    font-family: Patrick Hand SC, Roboto
+    font-size: 19px
+    margin-bottom: 50px
+    margin-left: 30px
 
-  li
-    a
-      text-decoration: none
-      display: block
-      padding-left: 20px
-      color: $base-body-color
-      position: relative
+    li
+      a
+        text-decoration: none
+        display: block
+        padding-left: 20px
+        color: $base-body-color
+        position: relative
 
-      &:before
-        content: ""
-        position: absolute
-        left: 0
-        top: 50%
-        margin-top: -6px
-        height: 12px
-        width: 12px
-        background: url('https://cdn.rawgit.com/encharm/Font-Awesome-SVG-PNG/master/black/svg/chevron-right.svg')
-        background-position: 50% 50%
-        background-repeat: no-repeat
-        background-size: contain
-        opacity: 0.6
+        &:before
+          content: ""
+          position: absolute
+          left: 0
+          top: 50%
+          margin-top: -6px
+          height: 12px
+          width: 12px
+          background: url('https://cdn.rawgit.com/encharm/Font-Awesome-SVG-PNG/master/black/svg/chevron-right.svg')
+          background-position: 50% 50%
+          background-repeat: no-repeat
+          background-size: contain
+          opacity: 0.6
 
-      &:hover
+        &:hover
+          color: $active-color
+
+      &.is-active a
+        font-weight: bold
         color: $active-color
-
-    &.is-active a
-      font-weight: bold
-      color: $active-color
