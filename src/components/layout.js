@@ -7,6 +7,7 @@ import "./layout.css";
 import "../styles/index.sass";
 import  Scroll from './Scroll' 
 
+
 const TemplateWrapper = ({ children }) => {
   const [showMenu, setShowMenu] = useState(false);
   return (
@@ -49,6 +50,7 @@ const TemplateWrapper = ({ children }) => {
             seo={data.datoCmsHome.seoMetaTags}
           />
           <div className="container__sidebar">
+         
             <div className="sidebar">
               <h6 className="sidebar__title">
                 <Link to="/">{data.datoCmsSite.globalSeo.siteName}</Link>
