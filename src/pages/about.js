@@ -4,6 +4,8 @@ import { HelmetDatoCms } from 'gatsby-source-datocms'
 import Img from 'gatsby-image'
 import Layout from "../components/layout"
 
+
+
 const About = ({ data: { about } }) => (
   <Layout>
     <article className="sheet">
