@@ -26,7 +26,7 @@ export const query = graphql`
       title
       coverImage {
         url
-        fluid(maxWidth: 1000,  imgixParams: {maxW: 1000, fm: "png", auto: "compress" }){
+        fluid(maxWidth: 2000,  imgixParams: {maxW: 2000, fm: "png", auto: "compress" }){
           ...GatsbyDatoCmsFluid
         }
       }
