@@ -3,13 +3,13 @@ require('dotenv').config()
 module.exports = {
   siteMetadata: {
     title: `Janice's Artwork`,
+    siteURL: `www.janicezilin.art`,
   },
   plugins: [
     `gatsby-plugin-modal-routing`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     `gatsby-transformer-remark`,
-    `gatsby-plugin-robots-txt`,
     `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-source-datocms`,
