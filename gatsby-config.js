@@ -9,6 +9,7 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     `gatsby-transformer-remark`,
+    `gatsby-plugin-robots-txt`,
     `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-source-datocms`,
@@ -16,7 +17,6 @@ module.exports = {
         apiToken: process.env.DATO_API_TOKEN,
       },
     },
-
     {
       resolve: `gatsby-plugin-modal-routing`,
       options: {
