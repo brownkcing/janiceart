@@ -6,7 +6,7 @@ import Layout from "../components/layout";
 import templateWork from '../templates/templateWork';
 
 
-const TemplatePage = ({ data }) => (
+const TemplatePage = ({ data: { template }  }) => (
 
   <Layout>
     <Masonry className="showcase">
@@ -30,7 +30,7 @@ export default TemplatePage
 
 export const query = graphql`
   query TemplateQuery {
-    allDatoCmsTemplate(sort: { fields: [position], order: DESC }) {
+    about: datoCmsTemplate(sort: { fields: [position], order: DESC }) {
       edges {
         node {
           id
