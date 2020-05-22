@@ -13,9 +13,6 @@ export default ({ data }) => (
        <article className="sheet">
          <HelmetDatoCms seo={data.datoCmsWork.seoMetaTags} />
             <Img fluid={data.datoCmsWork.coverImage.fluid} />
-            <div>
-              {data.datoCmsHome.copyrightWork}
-            </div>
       </article>
       </ConditionalLayout>
 )
@@ -33,7 +30,7 @@ export const query = graphql`
           ...GatsbyDatoCmsFluid
         }
       }
-      copyrightWork
+      copyright
     }
   }
 `
