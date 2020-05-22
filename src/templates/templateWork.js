@@ -11,29 +11,25 @@ import "../components/layout.css"
 export default ({ data }) => (
      <ConditionalLayout>
        <article className="sheet">
-         <HelmetDatoCms seo={data.datoCmsWork.seoMetaTags} />
-            <Img fluid={data.datoCmsWork.coverImage.fluid} />
-            <div>
-              {data.datoCmsHome.copyrightWork}
-            </div>
+         <HelmetDatoCms seo={data.datoCmsTemplate.seoMetaTags} />
+            <Img fluid={data.datoCmsTemplate.templateImage.fluid} />
       </article>
       </ConditionalLayout>
 )
 
 export const query = graphql`
-  query TemplateQuery($slug: String!) {
-    datoCmsTemplate(slug: { eq: $slug }) {
+  query WorkQuery($slug: String!) {
+    datoCmsWork(slug: { eq: $slug }) {
       seoMetaTags {
         ...GatsbyDatoCmsSeoMetaTags
       }
       title
-      coverImage {
+      templateImage {
         url
         fluid(maxWidth: 2000,  imgixParams: {maxW: 2000, fm: "png", auto: "compress" }){
           ...GatsbyDatoCmsFluid
         }
       }
-      copyrightWork
     }
   }
 `
