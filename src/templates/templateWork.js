@@ -18,8 +18,8 @@ export default ({ data }) => (
 )
 
 export const query = graphql`
-  query WorkQuery($slug: String!) {
-    datoCmsWork(slug: { eq: $slug }) {
+  query TemplateQuery($slug: String!) {
+    datoCmsTemplate(slug: { eq: $slug }) {
       seoMetaTags {
         ...GatsbyDatoCmsSeoMetaTags
       }
