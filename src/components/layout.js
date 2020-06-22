@@ -67,7 +67,7 @@ const TemplateWrapper = ({ children }) => {
                   <Link to="/">Home</Link>
                 </li>
                 <li>
-                  <Link to="/template">Templates</Link>
+                  <Link to="/template-page">Templates</Link>
                 </li>
                 <li>
                   <Link to="/about">About</Link>
