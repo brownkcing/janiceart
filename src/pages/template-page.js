@@ -1,30 +1,47 @@
-import React from 'react'
-import { graphql } from 'gatsby'
-import { HelmetDatoCms } from 'gatsby-source-datocms'
-import Img from 'gatsby-image'
-import Layout from "../components/layout"
+import React from 'react';
+import { Link, graphql } from 'gatsby';
+import Masonry from 'react-masonry-component';
+import Img from 'gatsby-image';
+import Layout from "../components/layout";
 
 
+const Template= ({ data }) => (
 
-const Template = ({ data: { template } }) => (
   <Layout>
-    test
-    {/* <article className="sheet">
-    <Img style={{borderRadius: "20%"}} fluid={template.photo.fluid} />
-    </article> */}
+    <Masonry className="showcase">
+      {data.allDatoCmsWork.edges.map(({ node: work }) => ( 
+        <div key={work.id} className="showcase__item">
+          <figure className="card">
+            <div className="card__image">
+            <Link state={{modal:true, noScroll:true}} to={`/works/${work.slug}`} className="card__image">
+              <Img fluid={work.coverImage.fluid} />
+            </Link>
+            </div>
+            </figure>
+        </div>
+      ))}
+    </Masonry>
   </Layout>
+  
 )
 
 export default Template
 
-// export const query = graphql`
-//   query TemplateQuery {
-//     template: datoCmsTemplatePage {
-//       photo {
-//         fluid(maxWidth: 1000,  imgixParams: {maxW: 1000, fm: "png", auto: "compress" }){
-//           ...GatsbyDatoCmsFluid
-//         }
-//       }
-//     }
-//   }
-// `
+export const query = graphql`
+  query IndexQuery {
+    allDatoCmsWork(sort: { fields: [position], order: DESC }) {
+      edges {
+        node {
+          id
+          title
+          slug
+          coverImage {
+            fluid(maxWidth: 400, maxHeight: 400, imgixParams: { fm: "jpg", auto: "compress" }) {
+              ...GatsbyDatoCmsSizes
+            }
+          }
+        }
+      }
+    }
+  }
+`
