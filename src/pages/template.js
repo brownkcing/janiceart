@@ -6,7 +6,7 @@ import Layout from "../components/layout"
 
 
 
-const TemplatePage = ({ data: { template } }) => (
+const Template = ({ data: { template } }) => (
   <Layout>
     <article className="sheet">
     <Img style={{borderRadius: "20%"}} fluid={template.photo.fluid} />
@@ -14,7 +14,7 @@ const TemplatePage = ({ data: { template } }) => (
   </Layout>
 )
 
-export default TemplatePage
+export default Template
 
 export const query = graphql`
   query TemplatepQuery {
