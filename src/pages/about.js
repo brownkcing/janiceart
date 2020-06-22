@@ -8,7 +8,7 @@ import Layout from "../components/layout"
 
 const About = ({ data: { about } }) => (
   <Layout>
-    <article className="shdeet">
+    <article className="sheet">
       <HelmetDatoCms seo={about.seoMetaTags} />
       <div className="sheet__inner">
         {/* <h1 className="sheet__title">{about.title}</h1> */}
