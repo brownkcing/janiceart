@@ -27,11 +27,6 @@ export const query = graphql`
           ...GatsbyDatoCmsFluid
         }
       }
-      bioNode {
-        childMarkdownRemark {
-          html
-        }
-      }
     }
   }
 `
