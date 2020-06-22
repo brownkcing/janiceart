@@ -19,9 +19,6 @@ export default Template
 export const query = graphql`
   query TemplateQuery {
     template: datoCmsTemplatePage {
-      seoMetaTags {
-        ...GatsbyDatoCmsSeoMetaTags
-      }
       photo {
         fluid(maxWidth: 1000,  imgixParams: {maxW: 1000, fm: "png", auto: "compress" }){
           ...GatsbyDatoCmsFluid
