@@ -17,7 +17,7 @@ const Template = ({ data: { template } }) => (
 export default Template
 
 export const query = graphql`
-  query TemplatepQuery {
+  query TemplateQuery {
     template: datoCmsTemplatePage {
       seoMetaTags {
         ...GatsbyDatoCmsSeoMetaTags
