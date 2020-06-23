@@ -6,12 +6,12 @@ import Layout from "../components/layout"
 
 
 
-const Template= ({ data: { template } }) => (
+const Template = ({ data: { template } }) => (
   <Layout>
     <article className="sheet">
       <HelmetDatoCms seo={template.seoMetaTags} />
       <div className="sheet__inner">
-        {/* <h1 className="sheet__title">{about.title}</h1> */}
+        {/* <h1 className="sheet__title">{template.title}</h1> */}
         <p className="sheet__lead">{template.subtitle}</p>
         <div className="sheet__gallery">
          <Img style={{borderRadius: "20%"}} fluid={template.photo.fluid} />
@@ -31,7 +31,7 @@ export default Template
 
 export const query = graphql`
   query TemplateQuery {
-    tempate: datoCmsTemplatePage {
+    template: datoCmsTemplatePage {
       seoMetaTags {
         ...GatsbyDatoCmsSeoMetaTags
       }
