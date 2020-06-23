@@ -6,20 +6,20 @@ import Layout from "../components/layout"
 
 
 
-const Template = ({ data: { template } }) => (
+const Other = ({ data: { other } }) => (
   <Layout>
     <article className="sheet">
-      <HelmetDatoCms seo={template.seoMetaTags} />
+      <HelmetDatoCms seo={other.seoMetaTags} />
       <div className="sheet__inner">
-        {/* <h1 className="sheet__title">{template.title}</h1> */}
-        <p className="sheet__lead">{template.subtitle}</p>
+        {/* <h1 className="sheet__title">{about.title}</h1> */}
+        <p className="sheet__lead">{other.subtitle}</p>
         <div className="sheet__gallery">
-         <Img style={{borderRadius: "20%"}} fluid={template.photo.fluid} />
+         <Img style={{borderRadius: "20%"}} fluid={other.photo.fluid} />
         </div>
         <div
           className="sheet__body"
           dangerouslySetInnerHTML={{
-            __html: template.bioNode.childMarkdownRemark.html,
+            __html: other.bioNode.childMarkdownRemark.html,
           }}
         />
       </div>
@@ -27,11 +27,11 @@ const Template = ({ data: { template } }) => (
   </Layout>
 )
 
-export default Template
+export default Other
 
 export const query = graphql`
-  query TemplateQuery {
-    template: datoCmsTemplatePage {
+  query OtherQuery {
+    other: datoCmsOtherPage {
       seoMetaTags {
         ...GatsbyDatoCmsSeoMetaTags
       }
