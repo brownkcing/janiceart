@@ -3,14 +3,13 @@ import { Link, graphql } from 'gatsby';
 import Masonry from 'react-masonry-component';
 import Img from 'gatsby-image';
 import Layout from "../components/layout";
-import NoRightClick from '../components/noRightClick';
+
 
 
 const IndexPage = ({ data }) => (
 
   <Layout>
     <Masonry className="showcase">
-      <NoRightClick />
       {data.allDatoCmsWork.edges.map(({ node: work }) => ( 
         <div key={work.id} className="showcase__item">
           <figure className="card">
