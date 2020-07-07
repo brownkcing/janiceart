@@ -9,7 +9,7 @@ const OtherInPage = ({ data }) => (
 
   <Layout>
     <Masonry className="showcase">
-      {data.allDatoCmsWork.edges.map(({ node: other }) => ( 
+      {data.allDatoCmsOther.edges.map(({ node: other }) => ( 
         <div key={other.id} className="showcase__item">
           <figure className="card">
             <div className="card__image">
