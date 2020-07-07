@@ -29,7 +29,7 @@ export default OtherInPage
 
 export const query = graphql`
   query OtherInQuery {
-    allDatoCmsWork(sort: { fields: [position], order: DESC }) {
+    allDatoCmsOther {
       edges {
         node {
           id

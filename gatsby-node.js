@@ -8,10 +8,17 @@ const otherTemplate = path.resolve(`./src/templates/other.js`)
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
-  const illustrate = new Promise((resolve, reject) => {
+  return new Promise((resolve, reject) => {
     graphql(`
       {
         allDatoCmsWork {
+          edges {
+            node {
+              slug
+            }
+          }
+        }
+        allDatoCmsOther {
           edges {
             node {
               slug
@@ -29,26 +36,7 @@ exports.createPages = ({ graphql, actions }) => {
           },
         })
       })
-      resolve()
-    })
-  })
-
-  const otherWork = new Promise((resolve, reject) => {
-    graphql(`
-      {
-        allDatoCmsOther {
-          edges {
-            node {
-              slug
-            }
-          }
-        }
-      }
-    `).then(result => {
-      if (result.errors) {
-        Promise.reject(result.errors);
-      }
-      result.data.allDatoCmsOther.edges.map(({ node: other }) => {
+    result.data.allDatoCmsOther.edges.map(({ node: other }) => {
         createPage({
           path: `others/${other.slug}`,
           component: otherTemplate,
@@ -60,7 +48,5 @@ exports.createPages = ({ graphql, actions }) => {
       resolve()
     })
   })
-
-  return Promise.all([ otherWork, illustrate ]);
 }
 
